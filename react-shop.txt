@@ -1,0 +1,33 @@
+INICIALIZANDO PROYECTO
+-Create folder react-shop and inside this: git init and npm init, 
+    enter, until get to description: react eshop, in entry point: src/index.js, after until get to  keywords: react javascript
+    in author: Noe Gonzalez <email>, license: MIT, yes and finish configuration
+-Install dependencies, npm install react react-dom
+-The first folder to be created is src and inside this the file: index.js
+-In the same root create the "public" folder, inside this create "index.html"
+-Inside src: "App.js" 
+-Render 'App.js' using ReacDOM.render in index.html
+
+INSTALANDO BABEL Y WEBPACK 
+- BABEL npm install @babel/core @babel/preset-env @babel/preset-react 
+- WEBPACK npm install webpack webpack-cli webpack-dev-server 
+- HTML PLUGIN  npm install babel-loader html-loader html-webpack-plugin
+
+In root: .babelrc
+{
+    "presets": [
+        "@babel/preset-env",
+        "@babel/preset-react"
+    ]
+}
+
+In root webpack.config.js
+
+In packaje.json en scripts
+    "start": "webpack serve --open",
+    "build": "webpack --mode production"
+
+Create the html basic structure in index.html wich contain a div with the 'App' id.
+
+
+
