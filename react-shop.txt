@@ -1,4 +1,4 @@
-INICIALIZANDO PROYECTO
+-----INITIALIZING PROYECT
 -Create folder react-shop and inside this: git init and npm init, 
     enter, until get to description: react eshop, in entry point: src/index.js, after until get to  keywords: react javascript
     in author: Noe Gonzalez <email>, license: MIT, yes and finish configuration
@@ -8,7 +8,7 @@ INICIALIZANDO PROYECTO
 -Inside src: "App.js" 
 -Render 'App.js' using ReacDOM.render in index.html
 
-INSTALANDO BABEL Y WEBPACK 
+-----INSTAlING WEBPACK AND BABEL 
 - BABEL npm install @babel/core @babel/preset-env @babel/preset-react 
 - WEBPACK npm install webpack webpack-cli webpack-dev-server 
 - HTML PLUGIN  npm install babel-loader html-loader html-webpack-plugin
@@ -23,11 +23,35 @@ In root: .babelrc
 
 In root webpack.config.js
 
-In packaje.json en scripts
+In packaje.json in scripts
     "start": "webpack serve --open",
     "build": "webpack --mode production"
 
 Create the html basic structure in index.html wich contain a div with the 'App' id.
 
-
-
+-----SASS
+npm i mini-css-extract-plugin css-loader style-loader sass sass-loader -D
+In webpack 
+    const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+In rules
+    {
+        test:/\.s[ac]ss$/i,
+        use:[
+            "style-loader",
+            "css-loader",
+            "sass-loader"
+        ]
+    }
+In plugins
+    new MiniCssExtractPlugin({
+        filename: ["[name"].css
+    }),
+At the end add 
+    devServer: {
+        static: {
+            directory: path.join(__dirname, 'public'),
+            },
+        compress: true,
+        port: 3005,
+    }
+Inside src create a new folder called styles and create the global.scss file
