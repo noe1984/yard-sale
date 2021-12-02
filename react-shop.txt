@@ -1,5 +1,5 @@
 -----INITIALIZING PROYECT
--Create folder react-shop and inside this: git init and npm init, 
+-Create folder react-shop and inside this by console git init and npm init 
     enter, until get to description: react eshop, in entry point: src/index.js, after until get to  keywords: react javascript
     in author: Noe Gonzalez <email>, license: MIT, yes and finish configuration
 -Install dependencies, npm install react react-dom
@@ -8,7 +8,7 @@
 -Inside src: "App.js" 
 -Render 'App.js' using ReacDOM.render in index.html
 
------INSTAlING WEBPACK AND BABEL 
+-----INSTALLING WEBPACK AND BABEL 
 - BABEL npm install @babel/core @babel/preset-env @babel/preset-react 
 - WEBPACK npm install webpack webpack-cli webpack-dev-server 
 - HTML PLUGIN  npm install babel-loader html-loader html-webpack-plugin
@@ -44,7 +44,7 @@ In rules
     }
 In plugins
     new MiniCssExtractPlugin({
-        filename: ["[name"].css
+        filename: '[name].css'
     }),
 At the end add 
     devServer: {
@@ -55,3 +55,32 @@ At the end add
         port: 3005,
     }
 Inside src create a new folder called styles and create the global.scss file
+
+
+
+----CLONING THE REPOSITORY
+git clone https://github.com/platzi/curso-frontend-developer-practico 
+
+----LOGIN
+-Create a new folder in src called containers and inside create the Login.jsx component.
+-In clase1.html copy the login section and paste it into the Login.jsx component 
+-In global styles create the Login.scss file and paste the css copied from clase1.html 
+    the :root and body styles will be take it to 'global.css'
+----LAYOUT
+-Create the Layout.jsx component inside containers folder
+-In App return 
+    <Layout>
+        <Login />
+    </Layout>
+*Modify this section into webpack
+    test:/\.(css|scss)$/,
+-separate the element ': root' into a new file: vars.scss and use it into Login.css by  @use './vars'; 
+*Modify in rules section inside webpack:
+    {
+        test: /\.(png|jpg|svg|jpeg|webp)$/,
+        type: 'asset/resource',
+        generator: {
+            filename: 'assets/pictures/[hash][ext]',
+        }
+    }
+
