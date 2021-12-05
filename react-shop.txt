@@ -84,3 +84,16 @@ git clone https://github.com/platzi/curso-frontend-developer-practico
         }
     }
 
+-----PASSWORD RECOVERY
+-Create a new component called RecoveryPassword in containers.
+    In styles create RecoveryPassword.scss
+-npm install react-router-dom
+-Move App.js to a new folder called routes
+-Create a new Route thas has a new component named Home and other named NotFound
+-This 2 new components will be into a new folder in src named pages
+-Add this two components to App with its Routes
+In webpack add the next line into the output object
+    publicPath: '/'
+
+
+
