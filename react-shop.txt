@@ -87,6 +87,8 @@ git clone https://github.com/platzi/curso-frontend-developer-practico
 -----PASSWORD RECOVERY
 -Create a new component called RecoveryPassword in containers.
     In styles create RecoveryPassword.scss
+
+----ROUTES
 -npm install react-router-dom
 -Move App.js to a new folder called routes
 -Create a new Route thas has a new component named Home and other named NotFound
@@ -94,6 +96,40 @@ git clone https://github.com/platzi/curso-frontend-developer-practico
 -Add this two components to App with its Routes
 In webpack add the next line into the output object
     publicPath: '/'
+    In devServer replace all content with
+        historyApiFallback: true
+
+----ORGANIZATION OF COMPONENTS, CONTAINERS AND PAGES
+-In components create a new one called Header 
+-In pages folder put the next elements:
+    Checkout
+    CreateAccount
+    Home
+    Login
+    MyAccount
+    NewPassword
+    NotFound
+    Orders
+    PasswordRecovery
+    SendEmail
+    
+-In containers folder put the next elements:
+    Layout
+    MyOrder
+    ProductDetail
+    ProductList
+
+-In components folder put the next elements:
+    Header
+    Menu 
+    Order 
+    OrderItem
+    ProductInfo
+    ProductItem
+    ShoppingCartItem
+
+-In App.jsx add the new components, containers and pages
+-In styles folder add all the missing styles
 
 
 
