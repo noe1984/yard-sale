@@ -130,6 +130,18 @@ In webpack add the next line into the output object
 
 -In App.jsx add the new components, containers and pages
 -In styles folder add all the missing styles
+-In webpack at resolve add the next lines
+    alias: {
+        '@components': path.resolve(__dirname, 'src/components/'),
+        '@containers': path.resolve(__dirname, 'src/containers/'),
+        '@styles': path.resolve(__dirname, 'src/styles/'),
+        '@icons': path.resolve(__dirname, 'src/assets/icons/'),
+        '@logos': path.resolve(__dirname, 'src/assets/logos/'),
+    }
 
-
-
+-Now we can import syles in Header.jsx like this 
+    import '@styles/Header.scss';
+-Import the images this way
+    import menu from '@icons/icon_menu.svg'
+-In Header's style change the next className 
+    logo for nav-logo
