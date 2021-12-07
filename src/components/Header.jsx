@@ -6,10 +6,9 @@ import logo from '@logos/logo_yard_sale.svg';
 import shoppingCart from '@icons/icon_shopping_cart.svg';
 
 const Header = () => {
-	const [toggle, setToggle] = useState(false);
-
+	const [toggle, setToggle] = useState(false)
 	const handleToggle = () => {
-		setToggle(!toggle);
+		setToggle(!toggle)
 	}
 
 	return (
