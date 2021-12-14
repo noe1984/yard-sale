@@ -189,3 +189,6 @@ create a new folder in src named hooks and inside create a file called useGetPro
 -Create the handleClick funcion which containes addTocard
 -Pass this function to onClick event by an anonoymous funcion to the button in charge to send the product.
 
+----HEADER - React Context
+-Bring the state with AppContext and useState
+-In Li under the image show a div with the state.cart.length if state.cart.length > 0

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import '@styles/ProductItem.scss';
 import AddToCartImage from '@icons/bt_add_to_cart.svg';
 import AppContext from '../context/AppContext'
