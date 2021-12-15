@@ -164,13 +164,13 @@ In webpack add the next line into the output object
         "@babel/plugin-transform-runtime"
     ]
 
-----PRODUCT-LIST Custom hook
+----PRODUCT-LIST Custom hook - Show products
 create a new folder in src named hooks and inside create a file called useGetProducts.jsx
 ----PRODUCT ITEM 
 -Pass products to ProductItem component
 
 
-----LOGIN - useRef
+----LOGIN - useRef - Handling the submit
 -Create a const form by useRef
 -add to form the property ref={form}
 -Manage the handleSubmit using formData into a funcion called handleSubmit
@@ -180,15 +180,26 @@ create a new folder in src named hooks and inside create a file called useGetPro
 			email: formData.get('email')
 		}
 
-----PRODUCT ITEM - React Context
+----PRODUCT ITEM - React Context Handling Add to cart and state 
 -In src create a new folder called context 
 -Inside this folder create the AppContext.js file
 -Use this context in App.jsx, wrap the App with AppContext.Provider
 -In hooks create a new one called useInitialState.jsx which should return state and addTocard
 -use this hook in ProductItem getting the parameter addTocard by useContext from AppContext
 -Create the handleClick funcion which containes addTocard
--Pass this function to onClick event by an anonoymous funcion to the button in charge to send the product.
-
-----HEADER - React Context
+-Pass this function to the onClick event by an anonoymous funcion to the button in charge to send the product.
+ 
+----HEADER - React Context - Add to Cart
 -Bring the state with AppContext and useState
 -In Li under the image show a div with the state.cart.length if state.cart.length > 0
+
+----HEADER, MY ORDER - Show cart orders - Show total
+-Create const [toggleOrder, SetToggleOrder] = useState(false)
+-Import MyOrder Component in Header 
+-If toggleOrder is true show <MyOrder />
+-Add onClick property at the Li to manage the toggleOrder
+-In myOrder.scss Modify the styles.
+-In myOrder.jsx bring the state to make a 'map' of this
+
+-Create a funcion to sum the total using the reduce property
+-execute this funcion in the paragraph of the total.
