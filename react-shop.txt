@@ -203,3 +203,8 @@ create a new folder in src named hooks and inside create a file called useGetPro
 
 -Create a funcion to sum the total using the reduce property
 -execute this funcion in the paragraph of the total.
+
+
+----USE INITIALSTATE, ORDER ITEM - Remove item from cart
+-Add a new function called removeFromCart inside useInitialState.jsx to remove the choosed item using a filter
+-Create a function to handle the removal of the item and usit in the image section by the onClick event
