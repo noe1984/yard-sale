@@ -209,12 +209,32 @@ create a new folder in src named hooks and inside create a file called useGetPro
 -Add a new function called removeFromCart inside useInitialState.jsx to remove the choosed item using a filter
 -Create a function to handle the removal of the item and usit in the image section by the onClick event
 
-7 ISSUES
-1- navbar and modal disappear with scroll
+----7 ISSUES
+1- navbar and modal disappear with scroll, 2 -scroll inside My Order modal
 -At Header.scss add the next properties
 	width: calc(100% - 48px);
 	top: 0;
 	position: fixed;
 	background-color: #fff;
 -At MyOrder.scss
+	bottom: 0;
+	border-radius: 6px;
+	border: 1px solid var(--very-light-pink);
+	position: fixed;
+	transition: 1s ease;
+	animation: swipeLeft 1s ease forwards;
+
+    overflow-y: auto;     to fix scroll
+	z-index: 10000;
+
+3- modal back button
+-At MyOrder.jsx recieve toggleOrder and setToggleOrder by props 
+-Use this at the div that containes the img.
+
+4-toggle addToCart
+-ProductItem, In the handleClick function Add an if else to see if the item is in the state, 
+    in this case just return, else addTocard(item)
+-Create a new function to verify ir state.cart contains the item, 
+    in this case return AddedToCardImage else return AddToCartImage
+-Use this function at figure tag by the onClick event
 

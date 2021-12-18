@@ -1,14 +1,28 @@
 import React, { useContext } from 'react';
 import '@styles/ProductItem.scss';
-import AddToCartImage from '@icons/bt_add_to_cart.svg';
+import AddToCartImage from '@icons/add.svg';
+import AddedToCardImage from '@icons/added.svg';
 import AppContext from '../context/AppContext'
 
 const ProductItem = ({product}) => {
-	const { addToCart } = useContext(AppContext)
+	const { state, addToCart } = useContext(AppContext)
 
-	const handleClick = (payload) => {
-		addToCart(payload)
+	const handleClick = (item) => {
+		if (state.cart.includes(item)) {
+			return
+		} else {
+			addToCart(item) 
+		}
 	}
+
+	const verifyAdded = (item) => {
+		if (state.cart.includes(item)) {
+			return AddedToCardImage
+		} else {
+			return AddToCartImage
+		}
+	}
+	
 
 	return (
 		<div className="ProductItem" key={product.id}>
@@ -19,7 +33,7 @@ const ProductItem = ({product}) => {
 					<p>{product.title}</p>
 				</div>
 				<figure onClick={() => handleClick(product)} >
-					<img src={AddToCartImage} alt="" />
+					<img src={verifyAdded(product)} alt="" />
 				</figure>
 			</div>
 		</div>
