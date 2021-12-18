@@ -1,15 +1,18 @@
 @use './vars';
 .MyOrder {
-	background-color: white;
 	width: 360px;
 	padding: 24px;
 	box-sizing: border-box;
-	position: absolute;
-	right: 0;
+	right: -360px;
+	background-color: white;
 	top: 60px;
-	bottom: auto;
+	bottom: 0;
 	border-radius: 6px;
 	border: 1px solid var(--very-light-pink);
+	position: fixed;
+	transition: 1s ease;
+	animation: swipeLeft 1s ease forwards;
+	overflow-y: auto;
 }
 .title-container {
 	display: flex;
@@ -17,6 +20,7 @@
 .title-container img {
 	transform: rotate(180deg);
 	margin-right: 14px;
+	cursor: pointer;
 }
 .title {
 	font-size: var(--lg);
@@ -56,6 +60,11 @@
 	font-weight: bold;
 	height: 50px;
 }
+
+@keyframes swipeLeft {
+	100% {transform: translateX(-370px);}
+}
+
 @media (max-width: 640px) {
 	.MyOrder {
 		width: 100%;

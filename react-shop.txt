@@ -208,3 +208,13 @@ create a new folder in src named hooks and inside create a file called useGetPro
 ----USE INITIALSTATE, ORDER ITEM - Remove item from cart
 -Add a new function called removeFromCart inside useInitialState.jsx to remove the choosed item using a filter
 -Create a function to handle the removal of the item and usit in the image section by the onClick event
+
+7 ISSUES
+1- navbar and modal disappear with scroll
+-At Header.scss add the next properties
+	width: calc(100% - 48px);
+	top: 0;
+	position: fixed;
+	background-color: #fff;
+-At MyOrder.scss
+
