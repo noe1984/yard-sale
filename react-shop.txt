@@ -238,3 +238,23 @@ create a new folder in src named hooks and inside create a file called useGetPro
     in this case return AddedToCardImage else return AddToCartImage
 -Use this function at figure tag by the onClick event
 
+5-desktop menu visibility
+-Add some properties to Menus.scss 
+	top: 60px;
+	right: 0;
+	background-color: #ffffff;
+	animation: swipeLeftMenu 0.26s ease;
+@keyframes swipeLeftMenu {
+	0% {
+	  width: 0;
+	}
+	100% {
+	  width: 100px;
+	}
+}
+
+6-mobile menu visibility
+-Create the MobileMenu component 
+-Header.jsx, create a 'toggle' const  and a 'handleToggleMobile' funcion for this component to use it in the
+    menu image displayed when the app is in mobile mode.
+

@@ -6,18 +6,24 @@ import menuImage from '@icons/icon_menu.svg';
 import logo from '@logos/logo_yard_sale.svg';
 import shoppingCart from '@icons/icon_shopping_cart.svg';
 import AppContext from '../context/AppContext'
+import MobileMenu from '../components/MobileMenu'
 
 const Header = () => {
 	const [toggle, setToggle] = useState(false)
 	const [toggleOrder, setToggleOrder] = useState(false)
+	const [toggleOrderMobile, setToggleOrderMobile] = useState(false)
 	const { state } = useContext(AppContext)
 	const handleToggle = () => {
 		setToggle(!toggle)
 	}
 
+	const handleToggleMobile = () => {
+		setToggleOrderMobile(!toggleOrderMobile)
+	}
+
 	return (
 		<nav>
-			<img src={menuImage} alt="menu" className="menu" />
+			<img src={menuImage} alt="menu" className="menu" onClick={handleToggleMobile} />
 			<div className="navbar-left">
 				<img src={logo} alt="logo" className="nav-logo" />
 				<ul>
@@ -53,6 +59,7 @@ const Header = () => {
 				</ul>
 			</div>
 			{toggle && <Menu />} 
+			{toggleOrderMobile && <MobileMenu />}
 			{toggleOrder && <MyOrder toggleOrder={toggleOrder} setToggleOrder={setToggleOrder} />}
 		</nav>
 	);
