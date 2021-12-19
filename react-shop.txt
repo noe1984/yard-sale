@@ -258,3 +258,4 @@ create a new folder in src named hooks and inside create a file called useGetPro
 -Header.jsx, create a 'toggle' const  and a 'handleToggleMobile' funcion for this component to use it in the
     menu image displayed when the app is in mobile mode.
 
+7-clickable items
